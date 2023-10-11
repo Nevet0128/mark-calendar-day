@@ -1,0 +1,91 @@
+body {
+  background-color: #222;
+
+  color: #babab9;
+  width: 100%;
+  height: auto;
+}
+
+.calendario {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+  gap: 10px;
+  height: auto;
+  min-height: 100hv;
+
+  width: 100%;
+}
+
+.meses {
+  width: 661px;
+  height: auto;
+  min-height: auto;
+
+  align-items: center;
+}
+
+.titulo-mes {
+  text-align: center;
+  font-size: 2rem;
+
+  margin: 0;
+  border-bottom: 2px solid #babab9;
+
+  background-color: rgb(51, 153, 78);
+}
+
+.nombre-dias {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 45px;
+  width: 100%;
+  height: auto;
+  font-size: 1.4rem;
+
+  margin-top: 20px;
+}
+
+.seccion-dias {
+  display: flex;
+  flex-direction: row;
+
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  text-align: center;
+
+  width: 100%;
+  height: auto;
+
+  margin: 20px 0;
+}
+
+.numero-dia {
+  font-size: 1.3rem;
+  height: 30px;
+  width: 90px;
+  margin: 0;
+
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+}
+
+.dia-relleno {
+  height: 30px;
+  width: 90px;
+  margin: 0;
+}
+
+.numero-dia:hover {
+  cursor: pointer;
+}
+
+.marked {
+  background-color: rgb(140, 12, 12);
+}
