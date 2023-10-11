@@ -176,22 +176,19 @@ d.addEventListener('click', (e) => {
   ) {
     let hasMarked = buscarMarked.test(e.target.classList)
     let calendario = JSON.parse(window.localStorage.getItem('calendario'))
+    let mes = e.target.parentNode.parentNode.firstElementChild.textContent
+    let dia = e.target.textContent
+
     if (!hasMarked) {
       // Añadir fondo verde
-      console.log('Marcado')
       e.target.classList.add('marked')
-      calendario[e.target.parentNode.parentNode.firstElementChild.textContent][
-        e.target.textContent
-      ] = 'marked'
+      calendario[mes][dia] = 'marked'
       window.localStorage.setItem('calendario', JSON.stringify(calendario))
     } else {
       // Remover fondo verde
-      console.log('Eliminado')
       e.target.classList.remove('marked')
-      delete calendario[
-        e.target.parentNode.parentNode.firstElementChild.textContent
-      ][e.target.textContent]
-      window.localStorage.removeItem('calendario', JSON.stringify(calendario))
+      delete calendario[mes][dia]
+      window.localStorage.setItem('calendario', JSON.stringify(calendario))
     }
   }
 })
